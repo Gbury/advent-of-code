@@ -1,0 +1,31 @@
+(executable
+  (libraries   aoc)
+  (name        main)
+)
+
+; Small test examples
+(rule
+  (alias      test_one)
+  (deps       (:input test.in) (universe))
+  (action     (run ./main.exe --first %{input}))
+)
+
+(rule
+  (alias      test_two)
+  (deps       (:input test.in) (universe))
+  (action     (run ./main.exe --second %{input}))
+)
+
+; Actual puzzle to solve
+(rule
+  (alias      run_one)
+  (deps       (:input puzzle.in) (universe))
+  (action     (run ./main.exe --first %{input}))
+)
+
+; Actual puzzle to solve
+(rule
+  (alias      run_two)
+  (deps       (:input puzzle.in) (universe))
+  (action     (run ./main.exe --second %{input}))
+)

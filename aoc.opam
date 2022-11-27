@@ -1,0 +1,22 @@
+opam-version: "2.0"
+name: "aoc"
+version: "dev"
+maintainer: "Guillaume Bury <guillaume.bury@gmail.com>"
+authors: "Guillaume Bury <guillaume.bury@gmail.com>"
+license: "MIT"
+build: [
+  ["dune" "subst"] {dev}
+  ["dune" "build" "-p" name "-j" jobs]
+]
+depends: [
+  "ocaml" {>= "4.08"}
+  "seq"
+]
+
+tags: [ ]
+homepage: "https://github.com/Gbury/advent-of-code"
+dev-repo: "git+https://github.com/Gbury/advent-of-code.git"
+bug-reports: "https://github.com/Gbury/advent-of-code/issues"
+
+doc: "http://gbury.github.io/advent-of-code"
+synopsis: "A collection of solutions for the advent of code"
